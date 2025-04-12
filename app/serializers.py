@@ -1,17 +1,17 @@
 from rest_framework import serializers
-from .models import Category, Dish, Review
+from .models import Category, FoodItem, Order
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
 
-class DishSerializer(serializers.ModelSerializer):
+class FoodItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Dish
+        model = FoodItem
         fields = '__all__'
 
-class ReviewSerializer(serializers.ModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Review
+        model = Order
         fields = '__all__'
